@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\1084760\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.1.1\support-annotations-22.1.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
+        <dex dex="C:\xampp\htdocs\projects\SchoolopaediaApp\app\build\intermediates\pre-dexed\debug\support-annotations-22.1.1-2b86ebb2088383798ed940323e881ffcd7515fe3.jar" />
+    </item>
+    <item
+        jar="C:\xampp\htdocs\projects\SchoolopaediaApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="C:\xampp\htdocs\projects\SchoolopaediaApp\app\build\intermediates\pre-dexed\debug\classes-855deb45db217f3b9f2723a60bb5ae28c09d15e3.jar" />
+    </item>
+    <item
+        jar="C:\xampp\htdocs\projects\SchoolopaediaApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\libs\internal_impl-22.1.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="C:\xampp\htdocs\projects\SchoolopaediaApp\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.1-e98324cdea3a8b6d2fa635a5e2736be785e57851.jar" />
+    </item>
+    <item
+        jar="C:\xampp\htdocs\projects\SchoolopaediaApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
+        <dex dex="C:\xampp\htdocs\projects\SchoolopaediaApp\app\build\intermediates\pre-dexed\debug\classes-3c4e7251442466ae9765503cadb33a624d2f7502.jar" />
+    </item>
+
+</items>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Schoolopaedia</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="action_login">Login</string>
+    <string name="sign_in_header">Large Text</string>
+    <string name="facebook_button">Connect with Facebook</string>
+    <string name="google_button">Connect with Google</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_forgot_password">ForgotPasswordActivity</string>
+    <string name="action_register">Register</string>
+    <string name="action_forgot_password">Forgot Password</string>
+
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="already_a_member">Already have account ??</string>
+</resources>
