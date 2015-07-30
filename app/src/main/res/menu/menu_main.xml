@@ -11,19 +11,25 @@
 
     <item
         android:id="@+id/action_forgot_password"
-        android:orderInCategory="1"
+        android:orderInCategory="2"
         android:title="@string/action_forgot_password"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/action_register"
-        android:orderInCategory="1"
+        android:orderInCategory="3"
         android:title="@string/action_register"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/action_settings"
-        android:orderInCategory="100"
+        android:orderInCategory="4"
         android:title="@string/action_settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_logout"
+        android:orderInCategory="5"
+        android:title="@string/action_logout"
         app:showAsAction="never" />
 </menu>

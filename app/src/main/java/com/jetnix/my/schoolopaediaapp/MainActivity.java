@@ -11,6 +11,7 @@ import android.view.MenuItem;
 public class MainActivity extends ActionBarActivity {
 
     Toolbar toolbar;
+    UserLocalStore userLocalStore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,7 @@ public class MainActivity extends ActionBarActivity {
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        userLocalStore = new UserLocalStore(this);
     }
 
     @Override
@@ -50,6 +52,12 @@ public class MainActivity extends ActionBarActivity {
             case R.id.action_register:
                 intent = new Intent(MainActivity.this, RegisterActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.action_logout:
+                userLocalStore.clearUserData();
+                userLocalStore.setUserLoggedIn(false);
+                Intent loginIntent = new Intent(this, LoginActivity.class);
+                startActivity(loginIntent);
                 break;
         }
 

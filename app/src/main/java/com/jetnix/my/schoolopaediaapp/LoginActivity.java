@@ -40,7 +40,7 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
 
         login_error_text = (TextView) findViewById(R.id.login_error_text);
 
-
+        userLocalStore = new UserLocalStore(this);
     }
 
     @Override
@@ -82,9 +82,6 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
                 if(user_id.equals(id)){
                     setErrorMessage(response, SET_VISIBILITY_VISIBLE);
                 }else{
-                    Log.d("email", email);
-                    Log.d("user_id", user_id);
-                    Log.d("response", response);
                     logUserIn(Integer.parseInt(user_id), email);
                 }
 
