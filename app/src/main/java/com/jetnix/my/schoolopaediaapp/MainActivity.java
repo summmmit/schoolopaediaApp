@@ -26,6 +26,23 @@ public class MainActivity extends ActionBarActivity {
     }
 
     @Override
+    protected void onStart() {
+        super.onStart();
+        Integer user_id = checkforLogin();
+        Integer id = new Integer(-1);
+        if(user_id.equals(id) == true){
+            Intent loginIntent = new Intent(this, LoginActivity.class);
+            startActivity(loginIntent);
+        }
+    }
+
+    private Integer checkforLogin() {
+
+        Integer user_id = userLocalStore.getLoggedInUserId();
+        return user_id;
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
