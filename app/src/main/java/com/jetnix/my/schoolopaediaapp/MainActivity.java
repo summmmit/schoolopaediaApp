@@ -1,11 +1,15 @@
 package com.jetnix.my.schoolopaediaapp;
 
 import android.content.Intent;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import java.util.ArrayList;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -13,16 +17,24 @@ public class MainActivity extends ActionBarActivity {
     Toolbar toolbar;
     UserLocalStore userLocalStore;
 
+    TextView main_activity_text_view;
+    MainActivityToDrawerFragmentCallback mainActivityToDrawerFragmentCallback;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        userLocalStore = new UserLocalStore(this);
 
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        userLocalStore = new UserLocalStore(this);
+
+        main_activity_text_view = (TextView) findViewById(R.id.main_activity_text_view);
+
+        NavigationDrawerFragment navigationDrawerFragment = (NavigationDrawerFragment)  getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
+        navigationDrawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.main_activity_layout), toolbar);
     }
 
     @Override
@@ -33,7 +45,18 @@ public class MainActivity extends ActionBarActivity {
         if(user_id.equals(id) == true){
             Intent loginIntent = new Intent(this, LoginActivity.class);
             startActivity(loginIntent);
+        }else{
+            String email = userLocalStore.getLoggedInEmailAddress();
+            ArrayList<String> list = new ArrayList<String>();
+            list.add(email);
+            mainActivityToDrawerFragmentCallback.sendData(list);
+            changeData(email);
         }
+    }
+
+    private void changeData(String email) {
+
+        main_activity_text_view.setText(email);
     }
 
     private Integer checkforLogin() {

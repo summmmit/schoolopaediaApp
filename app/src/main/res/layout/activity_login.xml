@@ -14,7 +14,7 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="484dp"
+        android:layout_height="508dp"
         android:layout_marginBottom="30dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -80,10 +80,10 @@
             android:capitalize="none" />
 
         <TextView
-            android:id="@+id/forgot_password_text_view"
+            android:id="@+id/register_button_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Forgot Password ??"
+            android:text="Not a member Yet ??"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#DC483A"
             android:layout_marginTop="8dp"
@@ -113,6 +113,17 @@
             android:layout_marginTop="10dp"
             android:textColor="#FFF"
             android:capitalize="none" />
+
+        <TextView
+            android:id="@+id/forgot_password_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password ??"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#DC483A"
+            android:layout_marginTop="8dp"
+            android:textSize="15dp"
+            android:layout_gravity="center_horizontal" />
 
         <TextView
             android:id="@+id/login_error_text"

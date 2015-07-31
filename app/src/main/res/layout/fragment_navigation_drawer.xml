@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.jetnix.my.schoolopaediaapp.NavigationDrawerFragment">
+
+    <RelativeLayout
+        android:id="@+id/containerDrawerImage"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="#6543ff">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:padding="0dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/iamge"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/imageView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_drawer_name_text_view"
+            android:id="@+id/fragment_drawer_name_text_view"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:textColor="#fefffd" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_drawer_email_text_view"
+            android:id="@+id/fragment_drawer_email_text_view"
+            android:layout_below="@+id/fragment_drawer_name_text_view"
+            android:layout_centerHorizontal="true"
+            android:textColor="#fefffd" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

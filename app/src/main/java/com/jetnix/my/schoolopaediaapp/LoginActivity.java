@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class LoginActivity extends ActionBarActivity implements View.OnClickListener {
 
     EditText email_field, password_field;
-    TextView forgot_password_text_view, login_error_text;
+    TextView forgot_password_text_view, login_error_text, register_button_text_view;
     Button sign_in_button, facebook_button, google_button;
 
     private final Integer SET_VISIBILITY_GONE = 1;
@@ -35,6 +35,9 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
         forgot_password_text_view = (TextView) findViewById(R.id.forgot_password_text_view);
         forgot_password_text_view.setOnClickListener(this);
 
+        register_button_text_view = (TextView) findViewById(R.id.register_button_text_view);
+        register_button_text_view.setOnClickListener(this);
+
         sign_in_button = (Button) findViewById(R.id.sign_in_button);
         sign_in_button.setOnClickListener(this);
 
@@ -45,9 +48,14 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
 
     @Override
     public void onClick(View v) {
+        Intent intent = null;
         switch (v.getId()){
             case R.id.forgot_password_text_view:
-                Intent intent = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
+                 intent = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.register_button_text_view:
+                intent = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intent);
                 break;
             case R.id.sign_in_button:
