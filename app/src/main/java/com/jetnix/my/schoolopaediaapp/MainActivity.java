@@ -18,7 +18,7 @@ public class MainActivity extends ActionBarActivity {
     UserLocalStore userLocalStore;
 
     TextView main_activity_text_view;
-    MainActivityToDrawerFragmentCallback mainActivityToDrawerFragmentCallback;
+    NavigationDrawerFragment navigationDrawerFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +33,9 @@ public class MainActivity extends ActionBarActivity {
 
         main_activity_text_view = (TextView) findViewById(R.id.main_activity_text_view);
 
-        NavigationDrawerFragment navigationDrawerFragment = (NavigationDrawerFragment)  getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
+        navigationDrawerFragment = (NavigationDrawerFragment)  getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
         navigationDrawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.main_activity_layout), toolbar);
+
     }
 
     @Override
@@ -49,8 +50,8 @@ public class MainActivity extends ActionBarActivity {
             String email = userLocalStore.getLoggedInEmailAddress();
             ArrayList<String> list = new ArrayList<String>();
             list.add(email);
-            mainActivityToDrawerFragmentCallback.sendData(list);
             changeData(email);
+            navigationDrawerFragment.showUserDataOfDrawer(email);
         }
     }
 

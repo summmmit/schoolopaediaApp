@@ -58,7 +58,7 @@ public class ServerRequests {
         @Override
         protected ArrayList<String> doInBackground(Void... params){
 
-            String link= "http://10.0.2.2/projects/schoolopaedia/public/mobile/user/sign/in/post";
+            String link= "http://10.0.3.2/projects/schoolopaedia/public/mobile/user/sign/in/post";
             String data  = null;
             try {
                 data = URLEncoder.encode("identity", "UTF-8") + "=" + URLEncoder.encode(users.email, "UTF-8");
@@ -66,6 +66,8 @@ public class ServerRequests {
             } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();
             }
+
+            Log.v("data_send", data);
 
             StringBuilder sb = new StringBuilder();
             String line = null;
@@ -93,6 +95,8 @@ public class ServerRequests {
             } catch (Exception e) {
                 e.printStackTrace();
             }
+
+            Log.v("sb", sb+"");
 
             String JsonResult = sb.toString();
             JSONObject jsonObject = null;
@@ -129,6 +133,7 @@ public class ServerRequests {
                     }
                     list.add(user_id.toString());
                     list.add(emailAddress);
+                    Log.v("resutl", list+"");
                     list.add(response);
 
                 }
@@ -142,6 +147,7 @@ public class ServerRequests {
         @Override
         protected void onPostExecute(ArrayList<String> response) {
             super.onPostExecute(response);
+            Log.v("restl", response+"");
             progressDialog.dismiss();
             getUserDataFromRequest.getData(response);
         }
@@ -160,7 +166,7 @@ public class ServerRequests {
         @Override
         protected String doInBackground(Void... params) {
 
-            String link= "http://10.0.2.2/projects/schoolopaedia/public/mobile/user/account/create/post";
+            String link= "http://10.0.3.2/projects/schoolopaedia/public/mobile/user/account/create/post";
             String data  = null;
             try {
                 data = URLEncoder.encode("email", "UTF-8") + "=" + URLEncoder.encode(users.email, "UTF-8");

@@ -23,4 +23,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="fragment_drawer_name_text_view">Sumit Singh</string>
     <string name="fragment_drawer_email_text_view">summmmit33@gmail.com</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="title_activity_register_school">RegisterSchoolActivity</string>
 </resources>
