@@ -32,4 +32,10 @@
         android:orderInCategory="5"
         android:title="@string/action_logout"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_register_school"
+        android:orderInCategory="6"
+        android:title="@string/action_register_school"
+        app:showAsAction="never" />
 </menu>

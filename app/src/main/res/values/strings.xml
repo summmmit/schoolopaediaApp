@@ -25,4 +25,5 @@
     <string name="fragment_drawer_email_text_view">summmmit33@gmail.com</string>
     <string name="title_activity_profile">ProfileActivity</string>
     <string name="title_activity_register_school">RegisterSchoolActivity</string>
+    <string name="action_register_school">Register School</string>
 </resources>

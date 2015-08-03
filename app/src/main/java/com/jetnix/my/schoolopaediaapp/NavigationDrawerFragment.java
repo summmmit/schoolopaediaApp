@@ -143,7 +143,7 @@ public class NavigationDrawerFragment extends Fragment {
         fragment_drawer_email_text_view.setText(email);
     }
 
-    class RecyclerTouchListener implements RecyclerView.OnItemTouchListener{
+    static class RecyclerTouchListener implements RecyclerView.OnItemTouchListener{
 
         private GestureDetector gestureDetector;
         ClickListener clickListener;
@@ -183,6 +183,11 @@ public class NavigationDrawerFragment extends Fragment {
 
         @Override
         public void onTouchEvent(RecyclerView rv, MotionEvent e) {
+
+        }
+
+        @Override
+        public void onRequestDisallowInterceptTouchEvent(boolean b) {
 
         }
     }

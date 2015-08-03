@@ -2,39 +2,18 @@
 <items version="2" >
 
     <item
-        jar="C:\xampp\htdocs\projects\schools\schoolopaediaApp\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.1.1\jars\classes.jar"
+        jar="C:\xampp\htdocs\projects\school\schoolopaediaApp\app\build\intermediates\exploded-aar\com.android.support\design\22.2.0\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="e0b0c35d02308b270015a74cada4887e2e49b889">
-        <dex dex="C:\xampp\htdocs\projects\schools\schoolopaediaApp\app\build\intermediates\pre-dexed\debug\classes-6921ae28e6572a56207c61923572a8aab55d870e.jar" />
+        sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
+        <dex dex="C:\xampp\htdocs\projects\school\schoolopaediaApp\app\build\intermediates\pre-dexed\debug\classes-4f8223d18f6e0ccd7e6211379d748f98a560072f.jar" />
     </item>
     <item
-        jar="C:\xampp\htdocs\projects\schools\schoolopaediaApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\libs\internal_impl-22.1.1.jar"
+        jar="C:\xampp\htdocs\projects\school\schoolopaediaApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
-        <dex dex="C:\xampp\htdocs\projects\schools\schoolopaediaApp\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.1-9e61df214c85fef568eed6272a018836436c7269.jar" />
-    </item>
-    <item
-        jar="C:\xampp\htdocs\projects\schools\schoolopaediaApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.1.1\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
-        <dex dex="C:\xampp\htdocs\projects\schools\schoolopaediaApp\app\build\intermediates\pre-dexed\debug\classes-48ca42cf4cb73f48d029cf1581226ad6065bc024.jar" />
-    </item>
-    <item
-        jar="C:\xampp\htdocs\projects\schools\schoolopaediaApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
-        <dex dex="C:\xampp\htdocs\projects\schools\schoolopaediaApp\app\build\intermediates\pre-dexed\debug\classes-fe68ebde7524e3bb8df2552adaee7741b3dd569e.jar" />
-    </item>
-    <item
-        jar="C:\Users\summmmit\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.1.1\support-annotations-22.1.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
-        <dex dex="C:\xampp\htdocs\projects\schools\schoolopaediaApp\app\build\intermediates\pre-dexed\debug\support-annotations-22.1.1-214d8cda483a88a766441bfc0c82ccdd4783e162.jar" />
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="C:\xampp\htdocs\projects\school\schoolopaediaApp\app\build\intermediates\pre-dexed\debug\classes-47095326a689961260ed6e01e24098bc2bd57b24.jar" />
     </item>
 
 </items>

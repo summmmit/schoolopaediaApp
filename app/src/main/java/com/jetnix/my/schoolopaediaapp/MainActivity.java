@@ -100,6 +100,10 @@ public class MainActivity extends ActionBarActivity {
                 Intent loginIntent = new Intent(this, LoginActivity.class);
                 startActivity(loginIntent);
                 break;
+            case R.id.action_register_school:
+                intent = new Intent(MainActivity.this, RegisterSchoolActivity.class);
+                startActivity(intent);
+                break;
         }
 
         return super.onOptionsItemSelected(item);
