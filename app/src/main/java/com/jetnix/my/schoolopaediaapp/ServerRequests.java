@@ -58,7 +58,7 @@ public class ServerRequests {
         @Override
         protected ArrayList<String> doInBackground(Void... params){
 
-            String link= "http://10.0.3.2/projects/schoolopaedia/public/mobile/user/sign/in/post";
+            String link= "http://10.0.2.2/projects/schoolopaedia/public/mobile/user/sign/in/post";
             String data  = null;
             try {
                 data = URLEncoder.encode("identity", "UTF-8") + "=" + URLEncoder.encode(users.email, "UTF-8");
@@ -115,6 +115,7 @@ public class ServerRequests {
                     String success = new String("success");
                     String emailAddress = null;
                     Integer user_id = -1;
+                    Integer login_flag = -1;
 
                     if(status.equals(failed)){
                         String error = jsonObject.getString("error");
@@ -125,7 +126,10 @@ public class ServerRequests {
 
                         String result = jsonObject.getString("result");
                         JSONObject resultObject = jsonObject.getJSONObject("result");
-                        user_id = resultObject.getInt("user_id");
+                        JSONObject userObject = resultObject.getJSONObject("user");
+
+                        login_flag = resultObject.getInt("login_flag");
+                        user_id = userObject.getInt("id");
                         JSONObject requestObject = jsonObject.getJSONObject("request");
                         emailAddress = requestObject.getString("email");
 
@@ -133,7 +137,9 @@ public class ServerRequests {
                     }
                     list.add(user_id.toString());
                     list.add(emailAddress);
-                    Log.v("resutl", list+"");
+                    Log.v("resutl", list + "");
+                    Log.v("login_flag", login_flag+"");
+                    Log.v("user_id", user_id+"");
                     list.add(response);
 
                 }
@@ -166,7 +172,7 @@ public class ServerRequests {
         @Override
         protected String doInBackground(Void... params) {
 
-            String link= "http://10.0.3.2/projects/schoolopaedia/public/mobile/user/account/create/post";
+            String link= "http://10.0.2.2/projects/schoolopaedia/public/mobile/user/account/create/post";
             String data  = null;
             try {
                 data = URLEncoder.encode("email", "UTF-8") + "=" + URLEncoder.encode(users.email, "UTF-8");

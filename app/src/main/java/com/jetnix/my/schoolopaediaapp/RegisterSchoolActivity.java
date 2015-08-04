@@ -16,7 +16,7 @@ public class RegisterSchoolActivity extends ActionBarActivity implements View.On
 
     EditText student_code_register_school, school_code_register_school;
     Button register_button_register_school;
-    TextView error_text_register_school;
+    TextView error_text_register_school, student_group_id_register_school;
 
     private final Integer SET_VISIBILITY_GONE = 1;
     private final Integer SET_VISIBILITY_INVISIBLE = 2;
@@ -34,6 +34,7 @@ public class RegisterSchoolActivity extends ActionBarActivity implements View.On
         register_button_register_school.setOnClickListener(this);
 
         error_text_register_school = (TextView) findViewById(R.id.error_text_register_school);
+        student_group_id_register_school = (TextView) findViewById(R.id.student_group_id_register_school);
     }
 
     private int validate_register_school(String school_code, String student_code){
@@ -42,14 +43,14 @@ public class RegisterSchoolActivity extends ActionBarActivity implements View.On
         Log.v("school_code_aga", school_code);
         Log.v("student_codeasdg", student_code);
 
-        if(school_code.equals(school_code.isEmpty())){
-            setErrorMessage("Please Insert School Code", SET_VISIBILITY_VISIBLE);
-            response = 1;
-        }else if(student_code.isEmpty()){
+        if(student_code.isEmpty()){
             setErrorMessage("Please Insert Student Code", SET_VISIBILITY_VISIBLE);
+            response = 1;
+        }else if(school_code.isEmpty()){
+            setErrorMessage("Please Insert School Code", SET_VISIBILITY_VISIBLE);
             response = 2;
         }
-        return  response;
+        return response;
     }
 
     private void setErrorMessage(String text, Integer Visibility){
@@ -74,17 +75,26 @@ public class RegisterSchoolActivity extends ActionBarActivity implements View.On
             case R.id.register_button_register_school:
                 String student_code = student_code_register_school.getText().toString();
                 String school_code = school_code_register_school.getText().toString();
+                String group_id = student_group_id_register_school.getText().toString();
 
-                Log.v("student_code", student_code);
-
-                Log.v("school_code", school_code);
                 int validateRegistration = validate_register_school(school_code, student_code);
 
-                Log.v("validateRegistration", validateRegistration+"");
                 if(validateRegistration == 0){
-                    //setErrorMessage(null, SET_VISIBILITY_GONE);
-                }
+                    setErrorMessage(null, SET_VISIBILITY_GONE);
 
+                    Schools schools = new Schools();
+                    schools.setRegistration_code(school_code);
+                    schools.setCode_for_students(student_code);
+
+                    WelcomeSettingsRequests welcomeSettingsRequests = new WelcomeSettingsRequests(this);
+                    welcomeSettingsRequests.validateSchoolBySchoolCodeAndStudentCode(schools, group_id, new GetUserCallback() {
+                        @Override
+                        public void done(String jsonString) {
+
+                        }
+                    });
+
+                }
                 break;
         }
     }

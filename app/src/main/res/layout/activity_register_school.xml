@@ -58,8 +58,6 @@
             android:layout_weight="0.06"
             android:background="#424c55"
             android:ems="10"
-            android:inputType="textPassword"
-            android:textIsSelectable="true"
             android:paddingLeft="20dp"
             android:textSize="15dp"
             android:hint="School Code"
@@ -77,6 +75,13 @@
             android:text="ENroll Yourself"
             android:textColor="#FFF"
             android:capitalize="none" />
+
+        <TextView
+            android:id="@+id/student_group_id_register_school"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/group_id_for_students"
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/error_text_register_school"
