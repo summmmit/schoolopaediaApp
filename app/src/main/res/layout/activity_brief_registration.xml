@@ -1,0 +1,120 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:weightSum="1"
+    tools:context="com.jetnix.my.schoolopaediaapp.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:background="#202931"
+        android:minWidth="500dp"
+        android:orientation="vertical"
+        android:padding="30dp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/header_brief_registration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Register For School"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#fff" />
+
+        <EditText
+            android:id="@+id/first_name_brief_registration"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_weight="0.09"
+            android:background="#424c55"
+            android:capitalize="none"
+            android:hint="First Name"
+            android:paddingLeft="20dp"
+            android:textColor="#FFF"
+            android:textColorHint="#727273"
+            android:textIsSelectable="false"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/last_name_brief_registration"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.06"
+            android:background="#424c55"
+            android:ems="10"
+            android:hint="Last Name"
+            android:paddingLeft="20dp"
+            android:textColor="#FFF"
+            android:textColorHint="#727273"
+            android:textSize="15dp" />
+
+        <RadioGroup
+            android:id="@+id/sex_radio_group_brief_registration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp">
+
+            <RadioButton
+                android:id="@+id/female_radio_button_brief_registration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="Female"
+                android:textSize="20dp"
+                />
+
+            <RadioButton
+                android:id="@+id/male_radio_button_brief_registration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Male"
+                android:textSize="20dp" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/register_button_brief_registration"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.06"
+            android:background="#198a88"
+            android:capitalize="none"
+            android:text="ENroll Yourself"
+            android:textColor="#FFF" />
+
+        <TextView
+            android:id="@+id/error_text_register_school"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:text=""
+            android:textColor="#FFF"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -34,7 +34,7 @@ public class WelcomeSettingsRequests {
         new ValidationSchool(schools, group_id, getUserCallback).execute();
     }
 
-    public class ValidationSchool extends AsyncTask<Void ,Void, Void>{
+    class ValidationSchool extends AsyncTask<Void ,Void, Void>{
 
         Schools schools;
         GetUserCallback getUserCallback;

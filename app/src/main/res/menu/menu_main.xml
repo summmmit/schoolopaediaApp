@@ -38,4 +38,10 @@
         android:orderInCategory="6"
         android:title="@string/action_register_school"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_brief_registration"
+        android:orderInCategory="7"
+        android:title="@string/action_brief_registeration"
+        app:showAsAction="never" />
 </menu>

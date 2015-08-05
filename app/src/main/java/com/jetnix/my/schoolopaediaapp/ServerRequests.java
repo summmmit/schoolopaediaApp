@@ -45,6 +45,75 @@ public class ServerRequests {
         new FetchDataAsyncTask(user, getUserDataFromRequest).execute();
     }
 
+    public void validateSchoolByCodes(Schools schools, String group_id, GetUserCallback getUserCallback){
+        new ValidatingSchool(schools, group_id, getUserCallback).execute();
+    }
+
+    public class ValidatingSchool extends AsyncTask<Void , Void, Void>{
+
+        Schools schools;
+        GetUserCallback getUserCallback;
+        String group_id;
+
+        public ValidatingSchool(Schools schools, String group_id, GetUserCallback getUserCallback) {
+            this.schools = schools;
+            this.group_id = group_id;
+            this.getUserCallback = getUserCallback;
+        }
+        @Override
+        protected Void doInBackground(Void... params) {
+
+            String link= "https://10.0.2.2/projects/schoolopaedia/public/mobile/user/school/validation";
+            String data = null;
+
+            Log.v("schoolor_students()", schools.getCode_for_students()+"");
+
+            Log.v("schools.getCode", schools.getCode_for_students()+"");
+
+            try {
+                data = URLEncoder.encode("school_code", "UTF-8") + "=" + URLEncoder.encode(schools.getRegistration_code(), "UTF-8");
+                data += "&" + URLEncoder.encode("student_code", "UTF-8") + "=" + URLEncoder.encode(schools.getCode_for_students(), "UTF-8");
+                data += "&" + URLEncoder.encode("group_id", "UTF-8") + "=" + URLEncoder.encode(group_id, "UTF-8");
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+
+            Log.v("data", data+"");
+
+            StringBuilder sb = new StringBuilder();
+            String line = null;
+
+            try {
+
+                URL url = new URL(link);
+                URLConnection conn = url.openConnection();
+
+                conn.setDoOutput(true);
+                OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
+                wr.write(data);
+                wr.flush();
+
+                BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+
+                // Read Server Response
+                while((line = reader.readLine()) != null)
+                {
+                    sb.append(line);
+                    break;
+                }
+
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            Log.v("sb", sb+"");
+
+            return null;
+
+        }
+    }
+
     public class FetchDataAsyncTask extends AsyncTask<Void, Void, ArrayList<String>>{
 
         Users users;

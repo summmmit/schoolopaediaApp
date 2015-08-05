@@ -104,6 +104,10 @@ public class MainActivity extends ActionBarActivity {
                 intent = new Intent(MainActivity.this, RegisterSchoolActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.action_brief_registration:
+                intent = new Intent(MainActivity.this, BriefRegistrationActivity.class);
+                startActivity(intent);
+                break;
         }
 
         return super.onOptionsItemSelected(item);

@@ -27,4 +27,6 @@
     <string name="title_activity_register_school">RegisterSchoolActivity</string>
     <string name="action_register_school">Register School</string>
     <string name="group_id_for_students">2</string>
+    <string name="title_activity_brief_registration">BriefRegistrationActivity</string>
+    <string name="action_brief_registeration">Brief Registration</string>
 </resources>

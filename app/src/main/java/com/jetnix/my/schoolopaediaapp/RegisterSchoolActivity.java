@@ -86,8 +86,8 @@ public class RegisterSchoolActivity extends ActionBarActivity implements View.On
                     schools.setRegistration_code(school_code);
                     schools.setCode_for_students(student_code);
 
-                    WelcomeSettingsRequests welcomeSettingsRequests = new WelcomeSettingsRequests(this);
-                    welcomeSettingsRequests.validateSchoolBySchoolCodeAndStudentCode(schools, group_id, new GetUserCallback() {
+                    ServerRequests serverRequests = new ServerRequests(this);
+                    serverRequests.validateSchoolByCodes(schools, group_id, new GetUserCallback() {
                         @Override
                         public void done(String jsonString) {
 
